@@ -40,6 +40,34 @@ namespace twozerofoureight
             return board;
         }
 
+        public int GetScore()
+        {
+            int score = 0;
+            for (int i = 0; i < boardSize; i++)
+            {
+                for (int j = 0; j < boardSize; j++)
+                {
+                    score = score + board[i, j];
+                }
+            }
+            return score;
+        }
+
+        public bool CheckGameWin()
+        {
+            for (int i = 0; i < boardSize; i++)
+            {
+                for (int j = 0; j < boardSize; j++)
+                {
+                    if (board[i, j] == 2048)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
         private void AddRandomSlot()
         {
             while (true)
