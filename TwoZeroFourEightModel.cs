@@ -68,6 +68,48 @@ namespace twozerofoureight
             return false;
         }
 
+        public bool CheckGameOver()
+        {
+            bool status = false;
+            for (int i = 0; i < boardSize; i++)
+            {
+                for (int j = 0; j < boardSize; j++)
+                {
+                    if (i + 1 < boardSize && j + 1 < boardSize)
+                    {
+                        if (board[i,j] != 0 && board[i + 1 , j + 1] != 0)
+                        {
+                            status = true;
+                        }
+                        if(board[i, j] != 0 && board[i, j + 1] != board[i,j] && board[i, j + 1] != 0)
+                        {
+                            status = true;
+                        }
+                        if (board[i, j] != 0 && board[i + 1, j] != board[i, j] && board[i + 1, j] != 0)
+                        {
+                            status = true;
+                        }
+                    }
+                    if (i - 1 >= 0 && j - 1 >= 0)
+                    {
+                        if(board[i, j] != 0 && board[i - 1 , j - 1] != 0)
+                        {
+                            status = true;
+                        }
+                        if (board[i, j] != 0 && board[i, j - 1] != board[i, j] && board[i, j - 1] != 0)
+                        {
+                            status = true;
+                        }
+                        if (board[i, j] != 0 && board[i - 1, j] != board[i, j] && board[i - 1, j] != 0)
+                        {
+                            status = true;
+                        }
+                    }                
+                }
+            }
+            return status;
+        }
+
         private void AddRandomSlot()
         {
             while (true)

@@ -30,6 +30,7 @@ namespace twozerofoureight
             UpdateBoard(((TwoZeroFourEightModel)m).GetBoard());
             UpdateScore(((TwoZeroFourEightModel)m).GetScore());
             GameOver(((TwoZeroFourEightModel)m).CheckGameWin());
+            GameOver(((TwoZeroFourEightModel)m).CheckGameOver());
         }
 
         private void UpdateTile(Label l, int i)
@@ -64,11 +65,10 @@ namespace twozerofoureight
 
         private void GameOver(bool gamestatus)
         {
-
             if (gamestatus)
             {
                 lblover.BackColor = Color.SeaShell;
-                lblover.Text = "You Win!";
+                lblover.Text = "Game Over!";
                 btnUp.Enabled = false;
                 btnDown.Enabled = false;
                 btnLeft.Enabled = false;
