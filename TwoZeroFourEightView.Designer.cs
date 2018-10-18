@@ -264,7 +264,7 @@
             // btnLeft
             // 
             this.btnLeft.Location = new System.Drawing.Point(110, 484);
-            this.btnLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLeft.Margin = new System.Windows.Forms.Padding(4);
             this.btnLeft.Name = "btnLeft";
             this.btnLeft.Size = new System.Drawing.Size(71, 55);
             this.btnLeft.TabIndex = 16;
@@ -276,7 +276,7 @@
             // btnUp
             // 
             this.btnUp.Location = new System.Drawing.Point(184, 448);
-            this.btnUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUp.Margin = new System.Windows.Forms.Padding(4);
             this.btnUp.Name = "btnUp";
             this.btnUp.Size = new System.Drawing.Size(71, 55);
             this.btnUp.TabIndex = 17;
@@ -288,7 +288,7 @@
             // btnRight
             // 
             this.btnRight.Location = new System.Drawing.Point(257, 484);
-            this.btnRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRight.Margin = new System.Windows.Forms.Padding(4);
             this.btnRight.Name = "btnRight";
             this.btnRight.Size = new System.Drawing.Size(71, 55);
             this.btnRight.TabIndex = 18;
@@ -300,7 +300,7 @@
             // btnDown
             // 
             this.btnDown.Location = new System.Drawing.Point(184, 527);
-            this.btnDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDown.Margin = new System.Windows.Forms.Padding(4);
             this.btnDown.Name = "btnDown";
             this.btnDown.Size = new System.Drawing.Size(71, 55);
             this.btnDown.TabIndex = 19;
@@ -322,10 +322,10 @@
             // lblover
             // 
             this.lblover.AutoSize = true;
-            this.lblover.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lblover.Location = new System.Drawing.Point(22, 154);
+            this.lblover.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
+            this.lblover.Location = new System.Drawing.Point(12, 192);
             this.lblover.Name = "lblover";
-            this.lblover.Size = new System.Drawing.Size(0, 91);
+            this.lblover.Size = new System.Drawing.Size(0, 76);
             this.lblover.TabIndex = 23;
             // 
             // label1
@@ -367,7 +367,7 @@
             this.Controls.Add(this.lbl01);
             this.Controls.Add(this.lbl00);
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TwoZeroFourEightView";
             this.Text = "2048";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btn_KeyDown);
