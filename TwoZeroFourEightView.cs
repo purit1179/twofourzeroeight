@@ -30,7 +30,8 @@ namespace twozerofoureight
             UpdateBoard(((TwoZeroFourEightModel)m).GetBoard());
             UpdateScore(((TwoZeroFourEightModel)m).GetScore());
             GameOver(((TwoZeroFourEightModel)m).CheckGameWin());
-            GameOver(((TwoZeroFourEightModel)m).CheckGameOver());
+            GameOver(((TwoZeroFourEightModel)m).CheckGameOver());  
+            
         }
 
         private void UpdateTile(Label l, int i)
@@ -74,10 +75,6 @@ namespace twozerofoureight
                 btnLeft.Enabled = false;
                 btnRight.Enabled = false;
                 KeyPreview = false;
-            }
-            else
-            {
-                lblover.Text = "";
             }
         }
 
