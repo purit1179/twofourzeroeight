@@ -28,9 +28,9 @@ namespace twozerofoureight
         public void Notify(Model m)
         {
             UpdateBoard(((TwoZeroFourEightModel)m).GetBoard());
-            UpdateScore(((TwoZeroFourEightModel)m).GetScore());
-            GameOver(((TwoZeroFourEightModel)m).CheckGameWin());
-            GameOver(((TwoZeroFourEightModel)m).CheckGameOver());  
+            UpdateScore(((TwoZeroFourEightModel)m).GetScore()); //display score on screen
+            GameOver(((TwoZeroFourEightModel)m).CheckGameWin());    //to display win when has 2048 on a block
+            GameOver(((TwoZeroFourEightModel)m).CheckGameOver());  //to display game is over
             
         }
 
@@ -64,7 +64,7 @@ namespace twozerofoureight
             }
         }
 
-        private void GameOver(bool gamestatus)
+        private void GameOver(bool gamestatus)      //check game over and win
         {
             if (gamestatus)
             {
@@ -78,7 +78,7 @@ namespace twozerofoureight
             }
         }
 
-        private void UpdateScore(int score)
+        private void UpdateScore(int score) //update score on screen
         {
             lbscore.BackColor = Color.HotPink;
             lbscore.Text = Convert.ToString(score);
@@ -123,7 +123,7 @@ namespace twozerofoureight
         {
             controller.ActionPerformed(TwoZeroFourEightController.DOWN);
         }
-        private void btn_KeyDown(object sender, KeyEventArgs e)
+        private void btn_KeyDown(object sender, KeyEventArgs e) //play by use WASD and arrow key
         {
             if (KeyPreview == true)
             {
@@ -149,7 +149,7 @@ namespace twozerofoureight
             }
         }
 
-        private void btn_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        private void btn_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)   //activate arrow key
         {
             switch (e.KeyCode)
             {

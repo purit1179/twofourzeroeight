@@ -40,7 +40,7 @@ namespace twozerofoureight
             return board;
         }
 
-        public int GetScore()
+        public int GetScore()   //get score
         {
             int score = 0;
             for (int i = 0; i < boardSize; i++)
@@ -53,7 +53,7 @@ namespace twozerofoureight
             return score;
         }
 
-        public bool CheckGameWin()
+        public bool CheckGameWin()  //check game win
         {
             for (int i = 0; i < boardSize; i++)
             {
@@ -61,16 +61,16 @@ namespace twozerofoureight
                 {
                     if (board[i, j] == 2048)
                     {
-                        return true;
+                        return true;    //return true when win game
                     }
                 }
             }
             return false;
         }
 
-        public bool CheckGameOver()
+        public bool CheckGameOver() //check game over
         {
-            for(int i = 0; i < boardSize; i++)
+            for(int i = 0; i < boardSize; i++)  //check empty block in board
             {
                 for(int j = 0; j < boardSize; j++)
                 {
@@ -81,7 +81,7 @@ namespace twozerofoureight
                 }
             }
 
-            for (int i = 0; i < boardSize; i++)
+            for (int i = 0; i < boardSize; i++) //check case game over
             {
                 for (int j = 0; j < boardSize; j++)
                 {
@@ -103,7 +103,7 @@ namespace twozerofoureight
                         }              
                 }
             }
-            return true;
+            return true;    //return true when game is over
         }
 
         private void AddRandomSlot()
